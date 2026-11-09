@@ -5,7 +5,7 @@ Python 3.x
 # instalacion y ejecucion
 1. clonar el repositorio:
 ```bash
-   git clone <URL_DE_TU_REPOSITORIO>
+   git clone https://github.com/santi08-1/preentrega7_blog.git
    cd "Prentrega 7"
 
 2. Crear y activar el entorno virtual
