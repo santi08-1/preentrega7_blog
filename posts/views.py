@@ -11,7 +11,7 @@ def acerca(request):
 
 def detalle_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'posts/detalle_post.html', {'post': post})
+    return render(request, 'posts/post_detail.html', {'post': post})
 
 def crear_post(request):
     if request.method == 'POST':
@@ -39,5 +39,5 @@ def eliminar_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == 'POST':
         post.delete()
-        return redirect('inicio')
+        return render(request, 'posts/post_confirm_delete.html', {'post': post})
     return render(request, 'posts/eliminar_post.html', {'post': post})
