@@ -1,0 +1,21 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}{{ post.titulo }} - Mi Blog{% endblock %}
+
+{% block content %}
+    <h2>{{ post.titulo }}</h2>
+    <p><small>Autor: {{ post.autor }} | Fecha: {{ post.fecha_creacion }}</small></p>
+
+    {% if post.imagen %}
+        <div>
+            <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}" style="max-width: 400px; height: auto;">
+        </div>
+    {% endif %}
+
+    <p>{{ post.contenido }}</p>
+
+    <hr>
+    <a href="{% url 'editar_post' post.pk %}">Editar</a> |
+    <a href="{% url 'borrar_post' post.pk %}">Borrar</a> |
+    <a href="{% url 'inicio' %}">Volver al inicio</a>
+{% endblock %}

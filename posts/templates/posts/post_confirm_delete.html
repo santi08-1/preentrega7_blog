@@ -1,0 +1,14 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}Borrar post - Mi Blog{% endblock %}
+
+{% block content %}
+    <h2>¿Seguro que querés borrar "{{ post.titulo }}"?</h2>
+    <p>Esta acción no se puede deshacer.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sí, borrar</button>
+        <a href="{% url 'detalle_post' post.pk %}">Cancelar</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}{{ accion }} post - Mi Blog{% endblock %}
+
+{% block content %}
+    <h2>{{ accion }} publicación</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+        <a href="{% url 'inicio' %}">Cancelar</a>
+    </form>
+{% endblock %}
