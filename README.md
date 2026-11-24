@@ -1,8 +1,27 @@
-# Pre-entrega 10: CRUD y Manejo de Imágenes
+# Mi Blog en Django
 
-Se implementó el flujo completo de creación, lectura, edición y eliminación de publicaciones (crud), junto con la carga de imágenes:
+Proyecto web de blog desarrollado en Python y Django con gestión de publicaciones (CRUD) y carga de imágenes.
 
- **Procesamiento de imágenes:** Se instaló `Pillow` y se agregaron al archivo `requirements.txt`.
-**Configuración de archivos multimedia:** En `settings.py` se definieron `MEDIA_URL` y `MEDIA_ROOT`, y en `urls.py` se habilitó el servicio de archivos multimedia en modo desarrollo (`DEBUG = True`).
-**Modelo y formulario:** Se incorporó el campo `ImageField` al modelo `Post` y se creó `PostForm` (`ModelForm`) para gestionar los campos del formulario.
-**Formularios y vistas CRUD:** Se configuró `enctype="multipart/form-data"` en los formularios con carga de archivos y se implementaron las vistas y URLs para crear, ver detalle, editar y borrar publicaciones.
+# Autor
+- Santiago Ariel Pileckas
+
+# Tecnologías utilizadas
+- Python
+- Django
+- Pillow
+- python-decouple
+- SQLite
+- HTML / CSS
+
+# Funcionalidades principales
+- Listado y detalle de publicaciones.
+- Creación, edición y eliminación de posts (CRUD).
+- Carga y visualización de imágenes en las publicaciones (`ImageField` y configuración multimedia).
+- Configuración de variables de entorno mediante `python-decouple`.
+
+# Instalación y ejecución local
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/santi08-1/preentrega7_blog.git](https://github.com/santi08-1/preentrega7_blog.git)
+   cd preentrega7_blog
